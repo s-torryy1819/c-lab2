@@ -1,12 +1,13 @@
 using System;
 
-namespace lab_1
+namespace lab_2
 {
     class GameAccount
     {
-        public String userName;
+        public String userName = "";
         public int currentRating;
         public int gamesCount;
+        AllPlayerStatistics allPlayerStatistics = new AllPlayerStatistics();
         public String UserName
         {
             get { return userName; }
@@ -44,6 +45,7 @@ namespace lab_1
         }
         public void endGame()
         {
+            allPlayerStatistics.addDataPoint(userName, currentRating, gamesCount);
             currentRating = 0;
         }
         public void setGoal()
@@ -53,6 +55,10 @@ namespace lab_1
         public void setGoal(int goal)
         {
             currentRating += goal;
+        }
+        public List<PlayerStatistics> getStatistics()
+        {
+            return allPlayerStatistics.getStatisticsList();
         }
         public AbstractGame WinGame(String opponentName, int rating)
         {

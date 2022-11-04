@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace lab_1
+namespace lab_2
 {
     public abstract class AbstractGame
     {
