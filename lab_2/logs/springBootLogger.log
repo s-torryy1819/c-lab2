@@ -1,0 +1,158 @@
+2022-11-22 18:18:38,150 [main] INFO  c.dotsource.cinderella.WebGuiApplication           - Starting WebGuiApplication using Java 17.0.4.1 on Viktoriia with PID 7444 (D:\dotSource_project\webgui\bin\main started by vicky in D:\University 2022-2023\C# OOP\lab_2)
+2022-11-22 18:18:38,156 [main] INFO  c.dotsource.cinderella.WebGuiApplication           - No active profile set, falling back to default profiles: DEV
+2022-11-22 18:18:38,269 [main] WARN  o.s.b.c.config.ConfigDataEnvironment               - Property 'spring.profiles' imported from location 'class path resource [application-DEV.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application-DEV.yml] - 6:13]
+2022-11-22 18:18:40,463 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 18:18:40,542 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 65 ms. Found 0 JPA repository interfaces.
+2022-11-22 18:18:42,630 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2022-11-22 18:18:43,072 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 4786 ms
+2022-11-22 18:18:44,347 [main] INFO  o.hibernate.jpa.internal.util.LogHelper            - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-22 18:18:44,499 [main] INFO  org.hibernate.Version                              - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-11-22 18:18:44,902 [main] INFO  org.hibernate.annotations.common.Version           - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-22 18:18:45,072 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2022-11-22 18:18:45,510 [main] INFO  com.zaxxer.hikari.pool.PoolBase                    - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2022-11-22 18:18:45,524 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2022-11-22 18:18:45,556 [main] INFO  org.hibernate.dialect.Dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-11-22 18:18:46,745 [main] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl               - GenerationTarget encountered exception accepting command : Error executing DDL "create table contacts (profile_link varchar(255) not null, created varchar(255), hash_key varchar(255), last_synchronized varchar(255), last_updated varchar(255), priority int4, primary key (profile_link))" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table contacts (profile_link varchar(255) not null, created varchar(255), hash_key varchar(255), last_synchronized varchar(255), last_updated varchar(255), priority int4, primary key (profile_link))" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:526)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:293)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:74)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.dotsource.cinderella.WebGuiApplication.main(WebGuiApplication.java:13)
+Caused by: java.sql.SQLSyntaxErrorException: type not found or user lacks privilege: INT4
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCStatement.fetchResult(Unknown Source)
+	at org.hsqldb.jdbc.JDBCStatement.execute(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 34 common frames omitted
+Caused by: org.hsqldb.HsqlException: type not found or user lacks privilege: INT4
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.ParserDQL.readTypeDefinition(Unknown Source)
+	at org.hsqldb.ParserTable.readColumnDefinitionOrNull(Unknown Source)
+	at org.hsqldb.ParserTable.readTableContentsSource(Unknown Source)
+	at org.hsqldb.ParserTable.compileCreateTableBody(Unknown Source)
+	at org.hsqldb.ParserTable.compileCreateTable(Unknown Source)
+	at org.hsqldb.ParserDDL.compileCreate(Unknown Source)
+	at org.hsqldb.ParserCommand.compilePart(Unknown Source)
+	at org.hsqldb.ParserCommand.compileStatements(Unknown Source)
+	at org.hsqldb.Session.executeDirectStatement(Unknown Source)
+	at org.hsqldb.Session.execute(Unknown Source)
+	... 39 common frames omitted
+2022-11-22 18:18:46,769 [main] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl               - GenerationTarget encountered exception accepting command : Error executing DDL "alter table contact_owners add constraint FK53lr67exh8mfdw99dy1q092wn foreign key (contact_profile_link) references contacts" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table contact_owners add constraint FK53lr67exh8mfdw99dy1q092wn foreign key (contact_profile_link) references contacts" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:526)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:452)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:263)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.dotsource.cinderella.WebGuiApplication.main(WebGuiApplication.java:13)
+Caused by: java.sql.SQLSyntaxErrorException: user lacks privilege or object not found: PUBLIC.CONTACTS
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCStatement.fetchResult(Unknown Source)
+	at org.hsqldb.jdbc.JDBCStatement.execute(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 33 common frames omitted
+Caused by: org.hsqldb.HsqlException: user lacks privilege or object not found: PUBLIC.CONTACTS
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.SchemaManager.getUserTable(Unknown Source)
+	at org.hsqldb.SchemaManager.getUserTable(Unknown Source)
+	at org.hsqldb.ParserDDL.compileAlterTableAddForeignKeyConstraint(Unknown Source)
+	at org.hsqldb.ParserDDL.compileAlterTable(Unknown Source)
+	at org.hsqldb.ParserDDL.compileAlter(Unknown Source)
+	at org.hsqldb.ParserCommand.compilePart(Unknown Source)
+	at org.hsqldb.ParserCommand.compileStatements(Unknown Source)
+	at org.hsqldb.Session.executeDirectStatement(Unknown Source)
+	at org.hsqldb.Session.execute(Unknown Source)
+	... 38 common frames omitted
+2022-11-22 18:18:46,786 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-22 18:18:46,809 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-22 18:18:46,850 [main] INFO  c.d.c.development.LocalConflictStorage             - Setting up Local Conflict Storage (Dummy for Development)
+2022-11-22 18:18:46,866 [main] INFO  c.d.c.development.LocalCrmAdapter                  - Setting up Local Salesforce Service (Dummy for Development)
+2022-11-22 18:18:46,882 [main] INFO  c.d.c.development.LocalExcludeStorage              - Setting up Local Exclude Storage (Dummy for Development)
+2022-11-22 18:18:46,906 [main] INFO  c.d.c.d.LocalContactInformationService             - Setting up Local Information Service (Dummy for Development)
+2022-11-22 18:18:46,914 [main] INFO  c.d.c.development.LocalContactStorage              - Setting up Local Contact Storage (Dummy for Development)
+2022-11-22 18:18:46,933 [main] INFO  c.d.c.d.FileBasedCredentialStorage                 - Setting up Local Credential Storage (Dummy for Development)
+2022-11-22 18:18:46,933 [main] INFO  c.d.c.d.FileBasedCredentialStorage                 - Setting Up new Credential Storage
+2022-11-22 18:18:46,939 [main] INFO  c.d.c.development.LocalCredentialGateway           - Setting up Local Credential Gateway (Dummy for Development)
+2022-11-22 18:18:46,947 [main] INFO  c.d.c.development.LocalMappingStorage              - Setting up Local Mapping Storage (Dummy for Development)
+2022-11-22 18:18:46,955 [main] INFO  c.d.c.development.LocalNewContactStorage           - Setting up Local NewContactStorage (Dummy for Development)
+2022-11-22 18:18:46,995 [main] INFO  c.d.c.d.LocalUpdateNotificationAdapter             - Setting up Local UpdateNotificationAdapter (Dummy for Development)
+2022-11-22 18:18:47,526 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-22 18:18:47,672 [main] WARN  org.thymeleaf.templatemode.TemplateMode            - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2022-11-22 18:18:47,935 [main] INFO  c.d.c.w.s.config.SecurityConfiguration             - Try to authorize with ldap / AD
+2022-11-22 18:18:47,984 [main] INFO  c.d.c.w.s.config.SecurityConfiguration             - Try to authorize with ldaps: ldap://localhost:8389/, ou=personen,dc=dotsource
+2022-11-22 18:18:48,041 [main] INFO  o.s.s.l.DefaultSpringSecurityContextSource         -  URL 'ldap://localhost:8389/ou%3Dpersonen%2Cdc%3Ddotsource', root DN is 'ou%3Dpersonen%2Cdc%3Ddotsource'
+2022-11-22 18:18:48,049 [main] INFO  o.s.l.core.support.AbstractContextSource           - Property 'userDn' not set - anonymous context will be used for read-write operations
+2022-11-22 18:18:48,081 [main] INFO  c.d.c.w.s.config.SecurityConfiguration             - auth is: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$2@3183a37c
+2022-11-22 18:18:48,097 [main] INFO  o.s.s.l.search.FilterBasedLdapUserSearch           - SearchBase not set. Searches will be performed from the root: ou=personen,dc=dotsource
+2022-11-22 18:18:48,185 [main] INFO  o.s.s.web.DefaultSecurityFilterChain               - Will secure Ant [pattern='/resources/**'] with []
+2022-11-22 18:18:48,185 [main] INFO  o.s.s.web.DefaultSecurityFilterChain               - Will secure Ant [pattern='/static/**'] with []
+2022-11-22 18:18:48,185 [main] INFO  o.s.s.web.DefaultSecurityFilterChain               - Will secure Ant [pattern='/css/**'] with []
+2022-11-22 18:18:48,185 [main] INFO  o.s.s.web.DefaultSecurityFilterChain               - Will secure Ant [pattern='/js/**'] with []
+2022-11-22 18:18:48,185 [main] INFO  o.s.s.web.DefaultSecurityFilterChain               - Will secure Ant [pattern='/images/**'] with []

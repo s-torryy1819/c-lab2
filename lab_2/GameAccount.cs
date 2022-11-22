@@ -2,11 +2,11 @@ using System;
 
 namespace lab_2
 {
-    class GameAccount
+    class GameAccount : GameAccountAbstract
     {
-        public String userName = "";
-        public int currentRating;
-        public int gamesCount;
+        new public String userName = "";
+        new public int currentRating;
+        new public int gamesCount;
         AllPlayerStatistics allPlayerStatistics = new AllPlayerStatistics();
         public String UserName
         {
@@ -38,41 +38,43 @@ namespace lab_2
             CurrentRating = currentRating;
             GamesCount = gamesCount;
         }
-        public void startNewGame()
+        public override void startNewGame()
         {
             currentRating = 0;
             gamesCount++;
         }
-        public void endGame()
+        public override void endGame()
         {
             allPlayerStatistics.addDataPoint(userName, currentRating, gamesCount);
             currentRating = 0;
         }
-        public void setGoal()
+        public override void setGoal()
         {
             currentRating++;
         }
-        public void setGoal(int goal)
+        public override void setGoal(int goal)
         {
             currentRating += goal;
         }
-        public List<PlayerStatistics> getStatistics()
+        public override List<PlayerStatistics> getStatistics()
         {
             return allPlayerStatistics.getStatisticsList();
         }
-        public AbstractGame WinGame(String opponentName, int rating)
+        public override AbstractGame WinGame(String opponentName, int rating)
         {
             AbstractGame abstractGame = new GameWithTwoPlayers();
-            abstractGame.WinGame(opponentName, rating, currentRating, userName);
+            abstractGame.WinGame(userName);
+            Console.WriteLine(abstractGame.getWinner() + " won!!!\nRating : " + currentRating + "\nThe opponent : " + opponentName + "\n........");
             return abstractGame;
         }
-        public AbstractGame LoseGame(String opponentName, int rating)
+        public override AbstractGame LoseGame(String opponentName, int rating)
         {
             AbstractGame abstractGame = new GameWithTwoPlayers();
-            abstractGame.LoseGame(opponentName, rating, currentRating, userName);
+            abstractGame.LoseGame(userName);
+            Console.WriteLine(abstractGame.getLoser() + " losed...\nRating : " + currentRating + "\nThe opponent : " + opponentName + "\n........");
             return abstractGame;
         }
-        public void GetStats()
+        public override void GetStats()
         {
             Console.WriteLine("Game Statistics\nUserName : " + userName + "\nRating : " + currentRating + "\nCount : " + gamesCount + "\n........");
         }
